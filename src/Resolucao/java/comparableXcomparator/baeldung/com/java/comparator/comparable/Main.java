@@ -18,8 +18,14 @@ public class Main {
 
         System.out.println("Depois do ordenamento: " + footballTeam);
 
-        // Output:
-        // Antes do ordenamento: [Resolucao.java.comparableXcomparator.baeldung.com.java.comparator.comparable.Player@776ec8df, Resolucao.java.comparableXcomparator.baeldung.com.java.comparator.comparable.Player@4eec7777, Resolucao.java.comparableXcomparator.baeldung.com.java.comparator.comparable.Player@3b07d329]
+        Player.ComparatorPorIdade comparadorPorIdade = new Player.ComparatorPorIdade();
+        Collections.sort(footballTeam, comparadorPorIdade);
+        System.out.println("Depois do ordenamento pelo comparator por idade: " + footballTeam);
 
+        System.out.println("------------------------------");
+
+        Player.ComparatorPorRanking ranking = new Player.ComparatorPorRanking();
+        Collections.sort(footballTeam, ranking);
+        System.out.println("Depois do ordenamento pelo comparator por ranking: " + footballTeam);
     }
 }

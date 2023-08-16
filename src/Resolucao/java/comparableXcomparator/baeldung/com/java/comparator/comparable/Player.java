@@ -13,6 +13,8 @@ package Resolucao.java.comparableXcomparator.baeldung.com.java.comparator.compar
 
 // Comparable
 
+import java.util.Comparator;
+
 public class Player implements Comparable<Player> {
     private int ranking;
     private String name;
@@ -37,4 +39,21 @@ public class Player implements Comparable<Player> {
     public String toString() {
         return "Player{" + "ranking=" + ranking + ", name=" + name + ", age=" + age + '}';
     }
+
+    public static class ComparatorPorIdade implements Comparator<Player> {
+        @Override
+        public int compare(Player o1, Player o2) {
+            return Integer.compare(o1.age, o2.age);
+        }
+
+    }
+
+    public static class ComparatorPorRanking implements Comparator<Player> {
+        @Override
+        public int compare(Player o1, Player o2) {
+            return Integer.compare(o1.ranking, o2.ranking);
+        }
+
+    }
 }
+
