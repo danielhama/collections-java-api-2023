@@ -37,7 +37,7 @@ public class Main {
 
         System.out.println("-Comparable-------------------------------------------");
 
-        Collections.sort(livros, Livro::compareTo);
+        Collections.sort(livros);
 
         for (Livro livro : livros) {
             System.out.println(livro);
@@ -57,6 +57,13 @@ public class Main {
         }
         System.out.println("-Comparator por Título-------------------------------------------");
         Collections.sort(livros, new Livro.ComparatorPorTitulo());
+
+        for (Livro livro : livros) {
+            System.out.println(livro);
+        }
+
+        System.out.println("-Comparator por Ano Autor e Título-------------------------------------------");
+        Collections.sort(livros, new Livro.CompararAnoAutorTitulo());
 
         for (Livro livro : livros) {
             System.out.println(livro);
