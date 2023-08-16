@@ -15,6 +15,18 @@ public class Main {
             System.out.println(livro.getTitulo());
         });
 
+        System.out.println("--------------------------------------------");
+        livros.sort((livro1, livro2) -> {
+                    return livro1.getTitulo().compareTo(livro2.getTitulo()); // Lambda expression para ordenar por título
+                }
+        );
+        livros.forEach(livro -> {
+                    System.out.println(livro);
+                }
+
+
+
+        );
 
     }
 }
