@@ -28,20 +28,25 @@ public class Main {
         System.out.println("--------------------------------------------");
 
         livros.sort((livro1, livro2) -> {
-            return Integer.compare(livro1.getAnoPublicacao(), livro2.getAnoPublicacao()) ;// Lambda expression para ordenar por ano
+                    return Integer.compare(livro1.getAnoPublicacao(), livro2.getAnoPublicacao());// Lambda expression para ordenar por ano
                 }
         );
         livros.forEach(livro -> {
-            System.out.println(livro);});
+            System.out.println(livro);
+        });
 
         System.out.println("-Comparable-------------------------------------------");
 
         Collections.sort(livros, Livro::compareTo);
 
-        for (Livro livro: livros){
+        for (Livro livro : livros) {
             System.out.println(livro);
         }
+        System.out.println("-Comparator por ano-------------------------------------------");
+        Collections.sort(livros, new Livro.ComparatorPorAnoPublicacao());
 
-
+        for (Livro livro : livros) {
+            System.out.println(livro);
         }
     }
+}
