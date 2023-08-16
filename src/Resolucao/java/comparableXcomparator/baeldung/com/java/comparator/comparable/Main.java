@@ -1,8 +1,7 @@
 package Resolucao.java.comparableXcomparator.baeldung.com.java.comparator.comparable;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         List<Player> footballTeam = new ArrayList<>();
@@ -27,5 +26,8 @@ public class Main {
         Player.ComparatorPorRanking ranking = new Player.ComparatorPorRanking();
         Collections.sort(footballTeam, ranking);
         System.out.println("Depois do ordenamento pelo comparator por ranking: " + footballTeam);
+
+
+
     }
 }

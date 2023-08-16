@@ -28,6 +28,15 @@ public class Player implements Comparable<Player> {
 
     public int getRanking() {
         return ranking;
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     @Override
