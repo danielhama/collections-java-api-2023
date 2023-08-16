@@ -21,12 +21,18 @@ public class Main {
                 }
         );
         livros.forEach(livro -> {
-                    System.out.println(livro);
+            System.out.println(livro);
+        });
+
+        System.out.println("--------------------------------------------");
+
+        livros.sort((livro1, livro2) -> {
+            return Integer.compare(livro1.getAnoPublicacao(), livro2.getAnoPublicacao()) ;// Lambda expression para ordenar por ano
                 }
-
-
-
         );
+        livros.forEach(livro -> {
+            System.out.println(livro);});
 
+
+        }
     }
-}
