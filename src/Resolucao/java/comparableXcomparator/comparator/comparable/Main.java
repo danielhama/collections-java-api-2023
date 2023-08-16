@@ -16,7 +16,7 @@ public class Main {
             System.out.println(livro.getTitulo());
         });
 
-        System.out.println("--------------------------------------------");
+        System.out.println("Lambda expression por título--------------------------------------------");
         livros.sort((livro1, livro2) -> {
                     return livro1.getTitulo().compareTo(livro2.getTitulo()); // Lambda expression para ordenar por título
                 }
@@ -25,7 +25,7 @@ public class Main {
             System.out.println(livro);
         });
 
-        System.out.println("--------------------------------------------");
+        System.out.println("Lambda expression por ano--------------------------------------------");
 
         livros.sort((livro1, livro2) -> {
                     return Integer.compare(livro1.getAnoPublicacao(), livro2.getAnoPublicacao());// Lambda expression para ordenar por ano
@@ -44,6 +44,19 @@ public class Main {
         }
         System.out.println("-Comparator por ano-------------------------------------------");
         Collections.sort(livros, new Livro.ComparatorPorAnoPublicacao());
+
+        for (Livro livro : livros) {
+            System.out.println(livro);
+        }
+
+        System.out.println("-Comparator por Autor-------------------------------------------");
+        Collections.sort(livros, new Livro.ComparatorPorAutor());
+
+        for (Livro livro : livros) {
+            System.out.println(livro);
+        }
+        System.out.println("-Comparator por Título-------------------------------------------");
+        Collections.sort(livros, new Livro.ComparatorPorTitulo());
 
         for (Livro livro : livros) {
             System.out.println(livro);

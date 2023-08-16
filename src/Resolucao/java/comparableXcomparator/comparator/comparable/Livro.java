@@ -41,5 +41,17 @@ public class Livro implements Comparable<Livro>{
             return Integer.compare(o1.getAnoPublicacao(), o2.getAnoPublicacao());
         }
     }
+    public static class ComparatorPorTitulo implements Comparator<Livro> {
+        @Override
+        public int compare(Livro o1, Livro o2) {
+            return o1.getTitulo().compareTo(o2.getTitulo());
+        }
+    }
+    public static class ComparatorPorAutor implements Comparator<Livro> {
+        @Override
+        public int compare(Livro o1, Livro o2) {
+            return o1.getAutor().compareTo(o2.getAutor());
+        }
+    }
 
 }
