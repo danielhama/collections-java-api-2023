@@ -1,6 +1,7 @@
 package Resolucao.java.comparableXcomparator.comparator.comparable;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,6 +33,14 @@ public class Main {
         );
         livros.forEach(livro -> {
             System.out.println(livro);});
+
+        System.out.println("-Comparable-------------------------------------------");
+
+        Collections.sort(livros, Livro::compareTo);
+
+        for (Livro livro: livros){
+            System.out.println(livro);
+        }
 
 
         }

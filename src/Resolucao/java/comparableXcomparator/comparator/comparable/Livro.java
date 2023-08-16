@@ -1,6 +1,6 @@
 package Resolucao.java.comparableXcomparator.comparator.comparable;
 
-public class Livro {
+public class Livro implements Comparable<Livro>{
     private String titulo;
     private String autor;
     private int anoPublicacao;
@@ -26,6 +26,11 @@ public class Livro {
     @Override
     public String toString() {
         return "Livro{" + "titulo=" + titulo + ", autor=" + autor + ", anoPublicacao=" + anoPublicacao + '}';
+    }
+
+    @Override
+    public int compareTo(Livro livro) {
+        return this.titulo.compareTo(livro.getTitulo());
     }
 
 }
