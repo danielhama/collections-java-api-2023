@@ -24,9 +24,13 @@ public class Player implements Comparable<Player> {
         this.age = age;
     }
 
+    public int getRanking() {
+        return ranking;
+    }
+
     @Override
     public int compareTo(Player player) {
-        return Integer.compare(this.ranking, player.ranking);
+        return Integer.compare(this.getRanking(), player.getRanking());
     }
 
     @Override
