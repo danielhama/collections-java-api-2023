@@ -9,7 +9,6 @@ public class Desafio8 {
         List<Integer> digitos = new ArrayList<>();
 
         numeros.stream().map(s -> s.toString())
-//                        .map(String::length)
                 .forEach(s -> {
                     if (s.length() == 1) {
                         digitos.add(Integer.parseInt(s));
@@ -21,7 +20,7 @@ public class Desafio8 {
                 });
         Integer somadigitos = digitos.stream().mapToInt(s -> s).sum();
         System.out.println(somadigitos);
-        System.out.println(numeros.stream().mapToInt(s -> s).sum());
+//        System.out.println(numeros.stream().mapToInt(s -> s).sum());
 
 
     }
