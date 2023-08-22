@@ -8,7 +8,7 @@ public class Desafio8 {
 
         List<Integer> digitos = new ArrayList<>();
 
-        numeros.stream().map(s -> s.toString())
+        numeros.stream().map(Object::toString)
                 .forEach(s -> {
                     if (s.length() == 1) {
                         digitos.add(Integer.parseInt(s));
